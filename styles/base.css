@@ -16,6 +16,12 @@ body {
   line-height: 1.6;
 }
 
+/* Navigation inside header */
+header nav {
+  background: #333; 
+  margin-top: 1rem;
+}
+
 /* Header */
 header {
   background: #1e3a8a;
@@ -32,18 +38,13 @@ header .highlight {
   color: #fbbf24; /* golden highlight */
 }
 
-/* Navigation inside header */
-header nav {
-  background: #333;
-  margin-top: 1rem;
-}
-
 header nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around; /* evenly spaced */
   gap: 2rem;
   list-style: none;
   padding: 0.75rem 0;
+  margin: 0;
 }
 
 header nav a {
@@ -164,4 +165,11 @@ footer {
     margin-left: 0;
     padding-top: 1rem;
   }
+}
+
+#course-title {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
