@@ -1,3 +1,4 @@
+/* temples-large.css */
 @media (min-width: 700px) {
   /* Hide hamburger on large screens */
   #menu {
@@ -6,20 +7,34 @@
 
   /* Navigation visible & horizontal */
   .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
+    display: block; /* nav itself just wraps the ul */
     background: transparent;
     padding: 0;
-    border-radius: 0;
+    margin: 0;
+  }
+
+  .navigation ul {
+    display: flex;
+    justify-content: space-around; /* evenly spaced */
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation li {
+    margin: 0;
   }
 
   .navigation a {
     background-color: #004080;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   .navigation a:hover {
