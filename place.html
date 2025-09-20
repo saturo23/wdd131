@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matobo — Place Page</title>
 
-  <!-- ✅ Metadata -->
+  <!-- Metadata -->
   <meta name="description" content="A responsive place page about Matobo Hills in Zimbabwe. Demonstrates responsive layout, srcset WebP hero image, CSS variables, pseudo-element, and JS wind chill calculation.">
   <meta name="author" content="Mduduzi Mashanda">
   <meta name="keywords" content="Matobo, Zimbabwe, travel, tourism, rock formations, San rock art, wildlife, UNESCO World Heritage">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
@@ -19,42 +22,50 @@
   </header>
 
   <main>
-   
+    <!-- Hero Image -->
     <picture>
-      <source srcset="images/hero-matobo-large.webp" media="(min-width: 600px)">
-      <img src="images/hero-matobo-small.webp" alt="Matobo Hills landscape" width="100%" height="auto">
+      <!-- Large image for wider screens -->
+      <source srcset="images/hero-matobo-small.webp" media="(min-width: 600px)">
+      <!-- Small image for mobile/smaller screens -->
+      <img src="images/hero-matobo-large.webp" alt="Matobo Hills landscape">
     </picture>
 
+    <!-- Intro -->
     <section class="intro">
       <h2>Welcome to Matobo</h2>
       <p>
-        The Matobo Hills, near Bulawayo, are a UNESCO World Heritage site known for their dramatic granite
-        rock formations, ancient San rock art, and cultural significance. Visitors can explore caves,
-        game parks, and historical landmarks in this breathtaking landscape.
+        Matobo National Park is in southwest Zimbabwe. It’s known for the Matobo Hills, a range of balancing rock formations created by erosion of the granite plateau.
+        The walls of Nswatugi Cave feature Stone Age rock art. The park has significant populations of black eagles and both black and white rhinos.
+        The grave of Cecil Rhodes, founder of former British colony Rhodesia, is carved into the summit of Malindidzimu.
       </p>
     </section>
 
+    <!-- Gallery -->
     <section class="gallery">
       <h2>Highlights</h2>
       <div class="grid">
         <figure>
-          <img src="images/matobo-rocks.webp" alt="Granite rock formations in Matobo Hills" width="400" height="300">
+          <img src="images/matobo-rocks.webp" alt="Granite rock formations in Matobo Hills">
           <figcaption>Granite Formations</figcaption>
         </figure>
         <figure>
-          <img src="images/rock-art.webp" alt="San rock art paintings" width="400" height="300">
+          <img src="images/rock-art.webp" alt="San rock art paintings">
           <figcaption>San Rock Art</figcaption>
         </figure>
         <figure>
-          <img src="images/wildlife.webp" alt="Wildlife in Matobo National Park" width="400" height="300">
+          <img src="images/wildlife.webp" alt="Wildlife in Matobo National Park">
           <figcaption>Matobo Wildlife</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cecil-rhodes-grave.webp" alt="Cecil Rhodes' grave in Matobo Hills">
+          <figcaption>Cecil Rhodes' Grave</figcaption>
         </figure>
       </div>
     </section>
 
+    <!-- Weather -->
     <section class="weather">
       <h2>Weather</h2>
-     
       <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
         <path d="M6 19a6 6 0 1 1 11.31-3.72A4.5 4.5 0 1 1 18 19H6z"/>
       </svg>
@@ -65,10 +76,12 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> Mduduzi Mashanda🍕| Last modified: <span id="last-modified"></span></p>
+    <p>&copy; <span id="year"></span> Mduduzi Mashanda 🍕 | Last modified: <span id="last-modified"></span></p>
   </footer>
 
+  <!-- JS -->
   <script src="scripts/windchill.js" defer></script>
 </body>
 </html>

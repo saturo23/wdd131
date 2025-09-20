@@ -24,7 +24,7 @@ h1::after {
 
 @media (min-width: 700px) {
   h1::after {
-    content: " 🏞️"; /* ✅ pseudo-element emoticon for wide view */
+    content: " 🏞️"; /* pseudo-element emoticon for wide view */
   }
 }
 
@@ -32,6 +32,11 @@ h1::after {
   padding: 1rem;
   max-width: 900px;
   margin: auto;
+}
+
+.intro p, .weather p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
 }
 
 .grid {
@@ -45,6 +50,17 @@ figure {
   text-align: center;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+picture {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .icon {
   display: block;
   margin: 1rem auto;
@@ -52,7 +68,7 @@ figure {
 
 @media (min-width: 600px) {
   .icon {
-    display: none; /* ✅ hide SVG in wide view */
+    display: none; /* hide SVG in wide view */
   }
 }
 
@@ -61,4 +77,9 @@ footer {
   color: white;
   text-align: center;
   padding: 0.5rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
