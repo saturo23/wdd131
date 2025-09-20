@@ -61,6 +61,14 @@ picture {
   margin-bottom: 1rem;
 }
 
+/* ✅ Hero image fix */
+picture img {
+  width: 100%;        /* span full width */
+  height: 400px;      /* adjust to make taller/shorter */
+  object-fit: cover;  /* keeps proportions while cropping edges */
+  display: block;
+}
+
 .icon {
   display: block;
   margin: 1rem auto;
