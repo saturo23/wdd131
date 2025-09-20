@@ -1,91 +1,77 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Madagascar — Place Page</title>
-  <meta name="description" content="A sample Place page for Madagascar. Demonstrates responsive layout, srcset WebP hero image, CSS variables, pseudo element, and JS wind chill calculation.">
-  <!-- Link CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matobo — Place Page</title>
+
+  <!-- ✅ Metadata -->
+  <meta name="description" content="A responsive place page about Matobo Hills in Zimbabwe. Demonstrates responsive layout, srcset WebP hero image, CSS variables, pseudo-element, and JS wind chill calculation.">
+  <meta name="author" content="Your Name">
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ External CSS -->
   <link rel="stylesheet" href="styles/place.css">
-  <!-- Defered JS -->
-  <script defer src="scripts/place.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="site-title">Madagascar</h1>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#">Home</a>
-        <a href="#">Explore</a>
-        <a href="#">Culture</a>
-        <a href="#">Travel Tips</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Matobo Hills</h1>
   </header>
 
   <main>
-    <!-- HERO: responsive WebP using picture + srcset -->
-    <section class="hero">
-      
-      <picture>
-        <!-- WebP sources at different widths -->
-        <source
-          srcset="
-            https://source.unsplash.com/800x600/?madagascar&fm=webp 800w,
-            https://source.unsplash.com/1200x800/?madagascar&fm=webp 1200w
-          "
-          type="image/webp" />
-        <!-- Fallback image -->
-        <img
-          src="https://source.unsplash.com/1200x800/?madagascar"
-          srcset="https://source.unsplash.com/600x400/?madagascar 600w, https://source.unsplash.com/1200x800/?madagascar 1200w"
-          alt="Madagascar landscape"
-          sizes="(max-width: 600px) 100vw, 1200px"
-          loading="lazy">
-      </picture>
+    <!-- ✅ Hero image with srcset -->
+    <picture>
+      <source srcset="images/hero-matobo-large.webp" media="(min-width: 600px)">
+      <img src="images/hero-matobo-small.webp" alt="Matobo Hills landscape" width="100%" height="auto">
+    </picture>
 
-      <div class="hero-text container">
-        <h2>Explore the "Red Island"</h2>
-        <p>Unique wildlife, baobabs, and dramatic landscapes — a photographer and nature lover's dream.</p>
-      </div>
+    <section class="intro">
+      <h2>Welcome to Matobo</h2>
+      <p>
+        The Matobo Hills, near Bulawayo, are a UNESCO World Heritage site known for their dramatic granite
+        rock formations, ancient San rock art, and cultural significance. Visitors can explore caves,
+        game parks, and historical landmarks in this breathtaking landscape.
+      </p>
     </section>
 
-    <section class="intro container">
-      <div class="grid two-col">
-        <article>
-          <h2>Overview</h2>
-          <p>Madagascar is an island nation in the Indian Ocean, famed for its biodiversity and landscapes ranging from rainforests to spiny deserts and white-sand beaches.</p>
-        </article>
-        <aside class="quick-facts">
-          <h3>Quick Facts</h3>
-          <ul>
-            <li>Capital: Antananarivo</li>
-            <li>Language: Malagasy & French</li>
-            <li>Population: ~28 million</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="features container">
-      <h2>Top Places to Visit</h2>
-      <div class="grid three-col">
+    <section class="gallery">
+      <h2>Highlights</h2>
+      <div class="grid">
         <figure>
-          <img src="https://source.unsplash.com/400x300/?baobab&fm=webp" alt="Baobab avenue" loading="lazy">
-          <figcaption>Avenue of Baobabs</figcaption>
+          <img src="images/matobo-rocks.webp" alt="Granite rock formations in Matobo Hills" width="400" height="300">
+          <figcaption>Granite Formations</figcaption>
         </figure>
         <figure>
-          <img src="https://source.unsplash.com/400x300/?tsingy&fm=webp" alt="Tsingy formations" loading="lazy">
-          <figcaption>Tsingy de Bemaraha</figcaption>
+          <img src="images/rock-art.webp" alt="San rock art paintings" width="400" height="300">
+          <figcaption>San Rock Art</figcaption>
         </figure>
         <figure>
-          <img src="https://source.unsplash.com/400x300/?beach-madagascar&fm=webp" alt="Nosy Be beach" loading="lazy">
-          <figcaption>Nosy Be Beaches</figcaption>
+          <img src="images/wildlife.webp" alt="Wildlife in Matobo National Park" width="400" height="300">
+          <figcaption>Matobo Wildlife</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- Weather section with mobile SVG icon and large-view pseudo-element emoticon -->
-    <section class="weather container" aria-labelledby="weather-heading">
-      <div class="weather-inner">
-        <h2 id="w
+    <section class="weather">
+      <h2>Weather</h2>
+      <!-- ✅ SVG weather icon (mobile only via CSS) -->
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+        <path d="M6 19a6 6 0 1 1 11.31-3.72A4.5 4.5 0 1 1 18 19H6z"/>
+      </svg>
+
+      <p>Temperature: <span id="temp">22</span>°C</p>
+      <p>Wind Speed: <span id="wind">10</span> km/h</p>
+      <p>Wind Chill: <span id="chill"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Matobo Place Page | Last modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <!-- ✅ External JS -->
+  <script src="scripts/windchill.js" defer></script>
+</body>
+</html>
