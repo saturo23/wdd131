@@ -120,5 +120,5 @@ const currentYear = new Date().getFullYear();
 const lastMod = document.lastModified;
 footer.innerHTML = `
   <p>&copy; ${currentYear} 🌍 Mduduzi Mashanda</p>
-  <p>Last Modified: ${lastMod} 😊</p>
+  <p>Last Modified: ${lastMod} </p>
 `;
