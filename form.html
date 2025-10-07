@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,57 +10,49 @@
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
 </head>
+
 <body>
   <header>
-    <h1>Product Review Form</h1>
+    <h1>Product Review</h1>
   </header>
 
   <main>
-    <form method="get" action="review.html" id="reviewForm">
-      <!-- Product Name -->
-      <label for="productName">Product Name</label>
-      <select id="productName" name="productName" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <!-- Options added dynamically by JavaScript -->
+    <form action="review.html" method="get">
+      <label for="product">Product Name</label>
+      <input type="text" id="product" name="product" required>
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select Rating</option>
+        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+        <option value="4">⭐⭐⭐⭐ Good</option>
+        <option value="3">⭐⭐⭐ Average</option>
+        <option value="2">⭐⭐ Poor</option>
+        <option value="1">⭐ Very Poor</option>
       </select>
 
-      <!-- Overall Rating -->
       <fieldset>
-        <legend>Overall Rating</legend>
-        <div class="rating">
-          <label><input type="radio" name="rating" value="1" required>⭐</label>
-          <label><input type="radio" name="rating" value="2">⭐⭐</label>
-          <label><input type="radio" name="rating" value="3">⭐⭐⭐</label>
-          <label><input type="radio" name="rating" value="4">⭐⭐⭐⭐</label>
-          <label><input type="radio" name="rating" value="5">⭐⭐⭐⭐⭐</label>
-        </div>
+        <legend>Purchase Details</legend>
+        <label for="purchasedate">Date Purchased</label>
+        <input type="date" id="purchasedate" name="purchasedate" required>
+
+        <p>Would you recommend this product?</p>
+        <label><input type="radio" name="recommend" value="yes" required> Yes</label>
+        <label><input type="radio" name="recommend" value="no"> No</label>
       </fieldset>
 
-      <!-- Date of Installation -->
-      <label for="installDate">Date of Installation</label>
-      <input type="date" id="installDate" name="installDate" required>
-
-      <!-- Useful Features -->
       <fieldset>
-        <legend>Useful Features (check all that apply)</legend>
-        <div class="checkbox-group">
-          <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-          <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-          <label><input type="checkbox" name="features" value="Design"> Design</label>
-          <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-        </div>
+        <legend>Product Features</legend>
+        <label><input type="checkbox" name="features" value="durable"> Durable</label>
+        <label><input type="checkbox" name="features" value="affordable"> Affordable</label>
+        <label><input type="checkbox" name="features" value="easy-to-use"> Easy to Use</label>
+        <label><input type="checkbox" name="features" value="eco-friendly"> Eco-friendly</label>
       </fieldset>
 
-      <!-- Written Review -->
-      <label for="writtenReview">Written Review (optional)</label>
-      <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share your experience..."></textarea>
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Write your review here..."></textarea>
 
-      <!-- User Name -->
-      <label for="userName">Your Name (optional)</label>
-      <input type="text" id="userName" name="userName" placeholder="Enter your name">
-
-      <!-- Submit Button -->
-      <button type="submit" class="submit-btn">Submit Product Review</button>
+      <input type="submit" value="Submit Product Review" class="submit-btn">
     </form>
   </main>
 
