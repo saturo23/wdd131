@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background-color: #f8f9fa;
   color: #333;
@@ -57,6 +57,7 @@ input, select, textarea {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
@@ -68,6 +69,7 @@ input, select, textarea {
   main {
     padding: 1rem;
   }
+
   form {
     padding: 1rem;
   }
