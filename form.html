@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Product review form for WDD131 assignment">
   <meta name="author" content="Mduduzi Mashanda">
-  <title>Product Review Form</title>
+  <title>Product Review Form | WDD131 Assignment</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
@@ -18,40 +18,48 @@
 
   <main>
     <form action="review.html" method="get">
+
+      <!-- Product Name -->
       <label for="product">Product Name</label>
       <input type="text" id="product" name="product" required>
 
+      <!-- Rating -->
       <label for="rating">Rating</label>
       <select id="rating" name="rating" required>
         <option value="">Select Rating</option>
-        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-        <option value="4">⭐⭐⭐⭐ Good</option>
-        <option value="3">⭐⭐⭐ Average</option>
-        <option value="2">⭐⭐ Poor</option>
         <option value="1">⭐ Very Poor</option>
+        <option value="2">⭐⭐ Poor</option>
+        <option value="3">⭐⭐⭐ Average</option>
+        <option value="4">⭐⭐⭐⭐ Good</option>
+        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
       </select>
 
+      <!-- Purchase Details -->
       <fieldset>
         <legend>Purchase Details</legend>
+
         <label for="purchasedate">Date Purchased</label>
         <input type="date" id="purchasedate" name="purchasedate" required>
 
         <p>Would you recommend this product?</p>
-        <label><input type="radio" name="recommend" value="yes" required> Yes</label>
-        <label><input type="radio" name="recommend" value="no"> No</label>
+        <label for="recommendYes"><input type="radio" id="recommendYes" name="recommend" value="yes" required> Yes</label>
+        <label for="recommendNo"><input type="radio" id="recommendNo" name="recommend" value="no"> No</label>
       </fieldset>
 
+      <!-- Product Features -->
       <fieldset>
         <legend>Product Features</legend>
-        <label><input type="checkbox" name="features" value="durable"> Durable</label>
-        <label><input type="checkbox" name="features" value="affordable"> Affordable</label>
-        <label><input type="checkbox" name="features" value="easy-to-use"> Easy to Use</label>
-        <label><input type="checkbox" name="features" value="eco-friendly"> Eco-friendly</label>
+        <label for="featureDurable"><input type="checkbox" id="featureDurable" name="features" value="durable"> Durable</label>
+        <label for="featureAffordable"><input type="checkbox" id="featureAffordable" name="features" value="affordable"> Affordable</label>
+        <label for="featureEasy"><input type="checkbox" id="featureEasy" name="features" value="easy-to-use"> Easy to Use</label>
+        <label for="featureEco"><input type="checkbox" id="featureEco" name="features" value="eco-friendly"> Eco-friendly</label>
       </fieldset>
 
+      <!-- Comments -->
       <label for="comments">Comments</label>
       <textarea id="comments" name="comments" rows="4" placeholder="Write your review here..."></textarea>
 
+      <!-- Submit Button -->
       <input type="submit" value="Submit Product Review" class="submit-btn">
     </form>
   </main>
