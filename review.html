@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer>
+    // localStorage counter
+    document.addEventListener("DOMContentLoaded", () => {
+      let count = Number(localStorage.getItem("reviewCount")) || 0;
+      count++;
+      localStorage.setItem("reviewCount", count);
+      document.getElementById("reviewCount").textContent = count;
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <p>Your review has been submitted successfully.</p>
+    <p>You have submitted <strong id="reviewCount">0</strong> reviews so far.</p>
+    <a href="form.html" class="submit-btn">Submit Another Review</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 | WDD131 | Product Review Form Assignment</p>
+  </footer>
+</body>
+</html>
