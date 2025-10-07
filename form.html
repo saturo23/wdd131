@@ -6,52 +6,66 @@
   <meta name="description" content="Product review form for WDD131 assignment">
   <meta name="author" content="Mduduzi Mashanda">
   <title>Product Review Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Product Review</h1>
+    <h1>Product Review Form</h1>
   </header>
 
   <main>
     <form method="get" action="review.html" id="reviewForm">
       <!-- Product Name -->
-      <label for="productName">Product Name:</label>
+      <label for="productName">Product Name</label>
       <select id="productName" name="productName" required>
         <option value="" disabled selected>Select a Product ...</option>
-        <!-- Options added by JavaScript -->
+        <!-- Options added dynamically by JavaScript -->
       </select>
 
       <!-- Overall Rating -->
       <fieldset>
-        <legend>Overall Rating:</legend>
+        <legend>Overall Rating</legend>
         <div class="rating">
-          <label><input type="radio" name="rating" value="1" required>★</label>
-          <label><input type="radio" name="rating" value="2">★★</label>
-          <label><input type="radio" name="rating" value="3">★★★</label>
-          <label><input type="radio" name="rating" value="4">★★★★</label>
-          <label><input type="radio" name="rating" value="5">★★★★★</label>
+          <label><input type="radio" name="rating" value="1" required>⭐</label>
+          <label><input type="radio" name="rating" value="2">⭐⭐</label>
+          <label><input type="radio" name="rating" value="3">⭐⭐⭐</label>
+          <label><input type="radio" name="rating" value="4">⭐⭐⭐⭐</label>
+          <label><input type="radio" name="rating" value="5">⭐⭐⭐⭐⭐</label>
         </div>
       </fieldset>
 
       <!-- Date of Installation -->
-      <label for="installDate">Date of Installation:</label>
+      <label for="installDate">Date of Installation</label>
       <input type="date" id="installDate" name="installDate" required>
 
       <!-- Useful Features -->
       <fieldset>
-        <legend>Useful Features (check all that apply):</legend>
-        <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
-        <label><input type="checkbox" name="features" value="Durability">Durability</label>
-        <label><input type="checkbox" name="features" value="Design">Design</label>
-        <label><input type="checkbox" name="features" value="Performance">Performance</label>
+        <legend>Useful Features (check all that apply)</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+          <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+          <label><input type="checkbox" name="features" value="Design"> Design</label>
+          <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+        </div>
       </fieldset>
 
       <!-- Written Review -->
-      <label for="writtenReview">Written Review (optional):</label>
+      <label for="writtenReview">Written Review (optional)</label>
       <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share your experience..."></textarea>
 
       <!-- User Name -->
-      <label for="userName">Your Name (optional):</label>
-      <input type="text" id="userName" name="userName" placeholder="Enter your name"
+      <label for="userName">Your Name (optional)</label>
+      <input type="text" id="userName" name="userName" placeholder="Enter your name">
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Product Review</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 | WDD131 | Product Review Form Assignment</p>
+  </footer>
+</body>
+</html>
