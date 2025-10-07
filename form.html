@@ -23,36 +23,63 @@
       <label for="product">Product Name</label>
       <input type="text" id="product" name="product" required>
 
-      <!-- Rating -->
-      <label for="rating">Rating</label>
-      <select id="rating" name="rating" required>
-        <option value="">Select Rating</option>
-        <option value="1">⭐ Very Poor</option>
-        <option value="2">⭐⭐ Poor</option>
-        <option value="3">⭐⭐⭐ Average</option>
-        <option value="4">⭐⭐⭐⭐ Good</option>
-        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-      </select>
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <div class="overall-rating">
+          <label>
+            <input type="radio" name="overallRating" value="1" required>
+            <span>★</span>
+          </label>
+          <label>
+            <input type="radio" name="overallRating" value="2">
+            <span>★</span>
+          </label>
+          <label>
+            <input type="radio" name="overallRating" value="3">
+            <span>★</span>
+          </label>
+          <label>
+            <input type="radio" name="overallRating" value="4">
+            <span>★</span>
+          </label>
+          <label>
+            <input type="radio" name="overallRating" value="5">
+            <span>★</span>
+          </label>
+        </div>
+      </fieldset>
 
       <!-- Purchase Details -->
       <fieldset>
         <legend>Purchase Details</legend>
-
         <label for="purchasedate">Date Purchased</label>
         <input type="date" id="purchasedate" name="purchasedate" required>
 
         <p>Would you recommend this product?</p>
-        <label for="recommendYes"><input type="radio" id="recommendYes" name="recommend" value="yes" required> Yes</label>
-        <label for="recommendNo"><input type="radio" id="recommendNo" name="recommend" value="no"> No</label>
+        <label for="recommendYes">
+          <input type="radio" id="recommendYes" name="recommend" value="yes" required> Yes
+        </label>
+        <label for="recommendNo">
+          <input type="radio" id="recommendNo" name="recommend" value="no"> No
+        </label>
       </fieldset>
 
       <!-- Product Features -->
       <fieldset>
         <legend>Product Features</legend>
-        <label for="featureDurable"><input type="checkbox" id="featureDurable" name="features" value="durable"> Durable</label>
-        <label for="featureAffordable"><input type="checkbox" id="featureAffordable" name="features" value="affordable"> Affordable</label>
-        <label for="featureEasy"><input type="checkbox" id="featureEasy" name="features" value="easy-to-use"> Easy to Use</label>
-        <label for="featureEco"><input type="checkbox" id="featureEco" name="features" value="eco-friendly"> Eco-friendly</label>
+        <label for="featureDurable">
+          <input type="checkbox" id="featureDurable" name="features" value="durable"> Durable
+        </label>
+        <label for="featureAffordable">
+          <input type="checkbox" id="featureAffordable" name="features" value="affordable"> Affordable
+        </label>
+        <label for="featureEasy">
+          <input type="checkbox" id="featureEasy" name="features" value="easy-to-use"> Easy to Use
+        </label>
+        <label for="featureEco">
+          <input type="checkbox" id="featureEco" name="features" value="eco-friendly"> Eco-friendly
+        </label>
       </fieldset>
 
       <!-- Comments -->
